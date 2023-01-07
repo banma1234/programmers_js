@@ -21,7 +21,25 @@ function solution(dots) {
     }
 }
 
+function otherSolution(dots) {
+    const leans = []
+
+    for(let i = 0; i < dots.length; i++) {
+        const dotA = dots[i];
+        for(let j = i + 1; j < dots.length; j++) {
+            const dotB = dots[j]
+            const lean = (dotB[1] - dotA[1])  / (dotB[0] - dotA[0])
+
+            if(leans.includes(lean)) return 1
+            else leans.push(lean)
+        }
+    }
+
+    return 0;
+}
+// 이중배열의 각 원소를 dotA, dotB로 나누어 관리하면 더 편하다.
+
 // const dots = [[1, 4], [9, 2], [3, 8], [11, 6]];
 const dots = [[3, 5], [4, 1], [2, 4], [5, 10]];
 
-console.log(solution(dots));
+console.log(otherSolution(dots));
