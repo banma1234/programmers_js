@@ -18,6 +18,15 @@ function solution(quiz) {
     return answer;
 }
 
+// Array의 메소드에대한 이해를 확실히 다지자
+function bestSolution(quiz) {
+  return quiz
+    .map((el) => el.split(" = "))
+    .map((el) => {
+      return eval(el[0]) == el[1] ? "O" : "X";
+    });
+}
+
 const quiz = ["3 - 4 = -3", "5 + 6 = 11"];
 
 console.log(solution(quiz));
