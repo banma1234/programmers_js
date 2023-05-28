@@ -1,5 +1,4 @@
 // sudo code
-// sudo code
 /*
 keymap = [{ A:0, B:1, C:3, D:4 }, { B:0, C:1, E:2, F:3, D:4 }]
 keyboard = { ...keymap }
