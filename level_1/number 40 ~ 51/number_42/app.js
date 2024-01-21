@@ -1,3 +1,4 @@
+// 최초작성 solution
 function solution(bandage, health, attacks) {
   let count = 0;
   let currentHealth = health;
@@ -33,12 +34,14 @@ function solution(bandage, health, attacks) {
   return currentHealth;
 }
 
+// 개선된 solution
 function betterSolution(bandage, health, attacks) {
   let currHealth = health;
   let currTime = 0;
 
   for (let [attackTime, damage] of attacks) {
     let diffTime = attackTime - currTime - 1;
+    // 공격시간 - 현재시간 - 1 = 붕대감기 성공한 횟수
     currHealth +=
       diffTime * bandage[1] + Math.floor(diffTime / bandage[0]) * bandage[2];
 
