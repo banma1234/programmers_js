@@ -8,7 +8,7 @@ function betterSolution(park, routes) {
     }
   }
 
-  routes.forEach(route => {
+  routes.forEach((route) => {
     const [r, n] = route.split(" ");
     let [nx, ny] = [x, y];
     let cnt = 0;
@@ -34,7 +34,7 @@ function solution(park, routes) {
     }
   });
 
-  routes.forEach(order => {
+  routes.forEach((order) => {
     let flag = true;
     const [direction, distance] = order.split(" ");
     let [tmpY, tmpX] = parkMap.current;

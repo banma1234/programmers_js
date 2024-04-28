@@ -8,14 +8,14 @@ function solution(N, stages) {
     map[i] = 0;
   }
 
-  stages.forEach(item => {
+  stages.forEach((item) => {
     if (map[item] != undefined) {
       map[item]++;
     }
   });
 
   const value = Object.values(map);
-  value.forEach(item => {
+  value.forEach((item) => {
     failed.push(item / countOfStage);
     countOfStage -= item;
   });

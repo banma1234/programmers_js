@@ -4,7 +4,7 @@ function solution(bandage, health, attacks) {
   let currentHealth = health;
 
   const action = {};
-  attacks.forEach(element => {
+  attacks.forEach((element) => {
     action[element[0]] = element[1];
   });
 

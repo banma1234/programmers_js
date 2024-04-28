@@ -16,7 +16,7 @@ function betterSolution(X, Y) {
   if (result === "") return "-1";
   if (Number(result) === 0) return "0";
   return [...result]
-    .map(e => Number(e))
+    .map((e) => Number(e))
     .sort((a, b) => b - a)
     .join("");
 }
@@ -27,14 +27,14 @@ function solution(X, Y) {
   let mapOfY = {};
   let result = [];
 
-  X.split("").forEach(item => {
+  X.split("").forEach((item) => {
     mapOfX[item] ? (mapOfX[item] += 1) : (mapOfX[item] = 1);
   });
-  Y.split("").forEach(item => {
+  Y.split("").forEach((item) => {
     mapOfY[item] ? (mapOfY[item] += 1) : (mapOfY[item] = 1);
   });
 
-  Object.keys(mapOfY).forEach(item => {
+  Object.keys(mapOfY).forEach((item) => {
     if (mapOfX[item]) {
       let min = Math.min(mapOfX[item], mapOfY[item]);
       for (let i = 0; i < min; i++) {

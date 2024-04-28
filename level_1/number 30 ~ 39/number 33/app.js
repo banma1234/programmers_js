@@ -3,18 +3,18 @@ function solution(board, moves) {
   const bascket = [];
   let newBoard = new Array(board.length).fill(0).map(() => new Array(0));
 
-  board.forEach(column => {
+  board.forEach((column) => {
     column.forEach((item, i) => {
       if (item) {
         newBoard[i].push(item);
       }
     });
   });
-  newBoard = newBoard.map(column => {
+  newBoard = newBoard.map((column) => {
     return column.reverse();
   });
 
-  moves.forEach(act => {
+  moves.forEach((act) => {
     if (newBoard[act - 1]) {
       let top = newBoard[act - 1].pop();
       if (top) {
